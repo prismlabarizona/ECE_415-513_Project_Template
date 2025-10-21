@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Heart Track</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>❤️ Heart Track</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="weekly-summary.html" class="nav-link">Weekly Summary</a>
+                <a href="daily-detail.html" class="nav-link">Daily Detail</a>
+                <a href="device-management.html" class="nav-link">Devices</a>
+                <a href="settings.html" class="nav-link">Settings</a>
+                <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <div class="dashboard-actions">
+                    <button class="btn btn-secondary" id="refreshBtn">Refresh Data</button>
+                    <button class="btn btn-primary" id="addDeviceBtn">Add Device</button>
+                </div>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">💓</div>
+                    <div class="stat-content">
+                        <h3 id="currentHeartRate">--</h3>
+                        <p>Current Heart Rate (BPM)</p>
+                        <span class="stat-trend" id="heartRateTrend">--</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🫁</div>
+                    <div class="stat-content">
+                        <h3 id="currentOxygen">--</h3>
+                        <p>Blood Oxygen (%)</p>
+                        <span class="stat-trend" id="oxygenTrend">--</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <h3 id="todayMeasurements">--</h3>
+                        <p>Today's Measurements</p>
+                        <span class="stat-trend" id="measurementsTrend">--</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📱</div>
+                    <div class="stat-content">
+                        <h3 id="activeDevices">--</h3>
+                        <p>Active Devices</p>
+                        <span class="stat-trend" id="devicesTrend">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Charts Section -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Today's Overview</h2>
+                        <div class="chart-controls">
+                            <select id="timeRange" class="form-select">
+                                <option value="today">Today</option>
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="heartRateChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="oxygenChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="dashboard-sidebar">
+                    <!-- Recent Activity -->
+                    <div class="sidebar-section">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list" id="activityList">
+                            <div class="activity-item">
+                                <div class="activity-icon">📊</div>
+                                <div class="activity-content">
+                                    <p>New measurement recorded</p>
+                                    <span class="activity-time">2 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">📱</div>
+                                <div class="activity-content">
+                                    <p>Device connected</p>
+                                    <span class="activity-time">15 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">⚙️</div>
+                                <div class="activity-content">
+                                    <p>Settings updated</p>
+                                    <span class="activity-time">1 hour ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Device Status -->
+                    <div class="sidebar-section">
+                        <h3>Device Status</h3>
+                        <div class="device-list" id="deviceList">
+                            <div class="device-item">
+                                <div class="device-info">
+                                    <h4>Heart Track Device #1</h4>
+                                    <span class="device-status online">Online</span>
+                                </div>
+                                <div class="device-battery">
+                                    <span class="battery-level">85%</span>
+                                </div>
+                            </div>
+                            <div class="device-item">
+                                <div class="device-info">
+                                    <h4>Heart Track Device #2</h4>
+                                    <span class="device-status offline">Offline</span>
+                                </div>
+                                <div class="device-battery">
+                                    <span class="battery-level">42%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="sidebar-section">
+                        <h3>Quick Actions</h3>
+                        <div class="quick-actions">
+                            <button class="action-btn" id="takeMeasurementBtn">
+                                <span class="action-icon">📊</span>
+                                Take Measurement
+                            </button>
+                            <button class="action-btn" id="viewWeeklyBtn">
+                                <span class="action-icon">📈</span>
+                                View Weekly Summary
+                            </button>
+                            <button class="action-btn" id="manageDevicesBtn">
+                                <span class="action-icon">⚙️</span>
+                                Manage Devices
+                            </button>
+                            <button class="action-btn" id="exportDataBtn">
+                                <span class="action-icon">📤</span>
+                                Export Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts Section -->
+            <div class="alerts-section">
+                <h2>Health Alerts</h2>
+                <div class="alerts-list" id="alertsList">
+                    <div class="alert-item warning">
+                        <div class="alert-icon">⚠️</div>
+                        <div class="alert-content">
+                            <h4>High Heart Rate Detected</h4>
+                            <p>Your heart rate exceeded 100 BPM for more than 10 minutes. Consider taking a break.</p>
+                            <span class="alert-time">30 minutes ago</span>
+                        </div>
+                        <button class="alert-dismiss">×</button>
+                    </div>
+                    <div class="alert-item info">
+                        <div class="alert-icon">ℹ️</div>
+                        <div class="alert-content">
+                            <h4>Measurement Reminder</h4>
+                            <p>It's time for your scheduled heart rate measurement.</p>
+                            <span class="alert-time">Just now</span>
+                        </div>
+                        <button class="alert-dismiss">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Heart Track</h3>
+                    <p>IoT-enabled heart rate monitoring system for ECE 413/513.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="reference.html">References</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs/setup.md">Setup Guide</a></li>
+                        <li><a href="docs/api.md">API Documentation</a></li>
+                        <li><a href="docs/hardware.md">Hardware Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ECE 413/513 Team. Educational project for University of Arizona.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

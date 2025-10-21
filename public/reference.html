@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References - Heart Track</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>❤️ Heart Track</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="reference.html" class="nav-link active">References</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- References Content -->
+    <main class="references-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Third-Party References</h1>
+                <p>This page lists all third-party APIs, libraries, and code used in the Heart Track project.</p>
+            </div>
+
+            <div class="references-content">
+                <!-- Frontend Libraries -->
+                <section class="reference-section">
+                    <h2>Frontend Libraries & Frameworks</h2>
+                    <div class="reference-grid">
+                        <div class="reference-item">
+                            <h3>Chart.js</h3>
+                            <p><strong>Version:</strong> 4.4.0</p>
+                            <p><strong>Purpose:</strong> Interactive charts and data visualization</p>
+                            <p><strong>Usage:</strong> Heart rate and blood oxygen charts in dashboard and detailed views</p>
+                            <p><strong>License:</strong> MIT</p>
+                            <p><strong>URL:</strong> <a href="https://www.chartjs.org/" target="_blank">https://www.chartjs.org/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Google Fonts - Inter</h3>
+                            <p><strong>Version:</strong> Latest</p>
+                            <p><strong>Purpose:</strong> Typography and font styling</p>
+                            <p><strong>Usage:</strong> Primary font family for the entire application</p>
+                            <p><strong>License:</strong> Open Font License</p>
+                            <p><strong>URL:</strong> <a href="https://fonts.google.com/specimen/Inter" target="_blank">https://fonts.google.com/specimen/Inter</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Backend Libraries -->
+                <section class="reference-section">
+                    <h2>Backend Libraries & Frameworks</h2>
+                    <div class="reference-grid">
+                        <div class="reference-item">
+                            <h3>Express.js</h3>
+                            <p><strong>Version:</strong> 4.18.2</p>
+                            <p><strong>Purpose:</strong> Web application framework for Node.js</p>
+                            <p><strong>Usage:</strong> RESTful API server and routing</p>
+                            <p><strong>License:</strong> MIT</p>
+                            <p><strong>URL:</strong> <a href="https://expressjs.com/" target="_blank">https://expressjs.com/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>MongoDB</h3>
+                            <p><strong>Version:</strong> Latest</p>
+                            <p><strong>Purpose:</strong> NoSQL database for data storage</p>
+                            <p><strong>Usage:</strong> User data, device information, and measurement storage</p>
+                            <p><strong>License:</strong> Server Side Public License</p>
+                            <p><strong>URL:</strong> <a href="https://www.mongodb.com/" target="_blank">https://www.mongodb.com/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Mongoose</h3>
+                            <p><strong>Version:</strong> 7.5.0</p>
+                            <p><strong>Purpose:</strong> MongoDB object modeling for Node.js</p>
+                            <p><strong>Usage:</strong> Database schema definition and data validation</p>
+                            <p><strong>License:</strong> MIT</p>
+                            <p><strong>URL:</strong> <a href="https://mongoosejs.com/" target="_blank">https://mongoosejs.com/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>JSON Web Tokens (JWT)</h3>
+                            <p><strong>Version:</strong> 9.0.2</p>
+                            <p><strong>Purpose:</strong> Secure token-based authentication</p>
+                            <p><strong>Usage:</strong> User authentication and API access control</p>
+                            <p><strong>License:</strong> MIT</p>
+                            <p><strong>URL:</strong> <a href="https://jwt.io/" target="_blank">https://jwt.io/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>bcryptjs</h3>
+                            <p><strong>Version:</strong> 2.4.3</p>
+                            <p><strong>Purpose:</strong> Password hashing and encryption</p>
+                            <p><strong>Usage:</strong> Secure password storage and verification</p>
+                            <p><strong>License:</strong> MIT</p>
+                            <p><strong>URL:</strong> <a href="https://github.com/dcodeIO/bcrypt.js" target="_blank">https://github.com/dcodeIO/bcrypt.js</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hardware Components -->
+                <section class="reference-section">
+                    <h2>Hardware Components</h2>
+                    <div class="reference-grid">
+                        <div class="reference-item">
+                            <h3>Particle Photon</h3>
+                            <p><strong>Model:</strong> Particle Photon</p>
+                            <p><strong>Purpose:</strong> IoT development board for device connectivity</p>
+                            <p><strong>Usage:</strong> Main microcontroller for heart rate monitoring device</p>
+                            <p><strong>Manufacturer:</strong> Particle</p>
+                            <p><strong>URL:</strong> <a href="https://www.particle.io/products/hardware/photon" target="_blank">https://www.particle.io/products/hardware/photon</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>MAX30102 Sensor</h3>
+                            <p><strong>Model:</strong> MAX30102</p>
+                            <p><strong>Purpose:</strong> Heart rate and blood oxygen saturation sensor</p>
+                            <p><strong>Usage:</strong> Primary sensor for health monitoring</p>
+                            <p><strong>Manufacturer:</strong> Maxim Integrated</p>
+                            <p><strong>URL:</strong> <a href="https://www.maximintegrated.com/en/products/sensors/MAX30102.html" target="_blank">https://www.maximintegrated.com/en/products/sensors/MAX30102.html</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Micro USB Cable</h3>
+                            <p><strong>Type:</strong> Micro USB</p>
+                            <p><strong>Purpose:</strong> Data transfer and power supply</p>
+                            <p><strong>Usage:</strong> Device programming and power connection</p>
+                            <p><strong>Specification:</strong> Standard Micro USB 2.0</p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Mini Breadboard</h3>
+                            <p><strong>Size:</strong> Mini (400 points)</p>
+                            <p><strong>Purpose:</strong> Prototyping and circuit assembly</p>
+                            <p><strong>Usage:</strong> Connecting sensor to development board</p>
+                            <p><strong>Specification:</strong> Standard breadboard with 400 tie points</p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Jumper Wires</h3>
+                            <p><strong>Type:</strong> Male-to-Male, Male-to-Female</p>
+                            <p><strong>Purpose:</strong> Electrical connections between components</p>
+                            <p><strong>Usage:</strong> Wiring sensor connections</p>
+                            <p><strong>Specification:</strong> 22 AWG, various lengths</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Code Examples & Tutorials -->
+                <section class="reference-section">
+                    <h2>Code Examples & Tutorials</h2>
+                    <div class="reference-grid">
+                        <div class="reference-item">
+                            <h3>Particle Documentation</h3>
+                            <p><strong>Purpose:</strong> Particle Photon development guide</p>
+                            <p><strong>Usage:</strong> IoT device setup and firmware development</p>
+                            <p><strong>URL:</strong> <a href="https://docs.particle.io/" target="_blank">https://docs.particle.io/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>MAX30102 Arduino Library</h3>
+                            <p><strong>Purpose:</strong> Sensor integration examples</p>
+                            <p><strong>Usage:</strong> Heart rate and oxygen sensor implementation</p>
+                            <p><strong>URL:</strong> <a href="https://github.com/oxullo/Arduino-MAX30100" target="_blank">https://github.com/oxullo/Arduino-MAX30100</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Express.js Best Practices</h3>
+                            <p><strong>Purpose:</strong> Node.js server development patterns</p>
+                            <p><strong>Usage:</strong> RESTful API design and implementation</p>
+                            <p><strong>URL:</strong> <a href="https://expressjs.com/en/advanced/best-practice-performance.html" target="_blank">https://expressjs.com/en/advanced/best-practice-performance.html</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>MongoDB University</h3>
+                            <p><strong>Purpose:</strong> Database design and optimization</p>
+                            <p><strong>Usage:</strong> Data modeling and query optimization</p>
+                            <p><strong>URL:</strong> <a href="https://university.mongodb.com/" target="_blank">https://university.mongodb.com/</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Design Resources -->
+                <section class="reference-section">
+                    <h2>Design Resources</h2>
+                    <div class="reference-grid">
+                        <div class="reference-item">
+                            <h3>CSS Grid Layout</h3>
+                            <p><strong>Purpose:</strong> Responsive layout system</p>
+                            <p><strong>Usage:</strong> Dashboard and component layouts</p>
+                            <p><strong>URL:</strong> <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">https://css-tricks.com/snippets/css/complete-guide-grid/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Flexbox Guide</h3>
+                            <p><strong>Purpose:</strong> Flexible component alignment</p>
+                            <p><strong>Usage:</strong> Navigation and form layouts</p>
+                            <p><strong>URL:</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+                        </div>
+                        
+                        <div class="reference-item">
+                            <h3>Color Palette Inspiration</h3>
+                            <p><strong>Purpose:</strong> Healthcare-focused color schemes</p>
+                            <p><strong>Usage:</strong> Application color scheme design</p>
+                            <p><strong>URL:</strong> <a href="https://coolors.co/" target="_blank">https://coolors.co/</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Acknowledgments -->
+                <section class="reference-section">
+                    <h2>Acknowledgments</h2>
+                    <div class="acknowledgments">
+                        <p>This project was developed as part of the ECE 413/513 course at the University of Arizona. Special thanks to:</p>
+                        <ul>
+                            <li>Course instructors for project guidance and requirements</li>
+                            <li>Teaching assistants for technical support and clarifications</li>
+                            <li>Open source community for providing excellent libraries and tools</li>
+                            <li>Particle team for comprehensive IoT development platform</li>
+                            <li>Maxim Integrated for high-quality sensor components</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Heart Track</h3>
+                    <p>IoT-enabled heart rate monitoring system for ECE 413/513.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs/setup.md">Setup Guide</a></li>
+                        <li><a href="docs/api.md">API Documentation</a></li>
+                        <li><a href="docs/hardware.md">Hardware Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ECE 413/513 Team. Educational project for University of Arizona.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

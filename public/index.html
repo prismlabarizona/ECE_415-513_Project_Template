@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Track - Heart Rate Monitoring System</title>
+    <meta name="description" content="IoT-enabled heart rate and blood oxygen monitoring system">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>❤️ Heart Track</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="reference.html" class="nav-link">References</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Monitor Your Heart Health</h1>
+                <p class="hero-description">
+                    Heart Track is an IoT-enabled web application that continuously monitors your heart rate 
+                    and blood oxygen saturation levels throughout the day. Stay informed about your cardiovascular 
+                    health with real-time data and comprehensive analytics.
+                </p>
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary">Get Started</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="device-mockup">
+                    <div class="device-screen">
+                        <div class="heart-rate-display">
+                            <div class="heart-icon">💓</div>
+                            <div class="rate-value">72</div>
+                            <div class="rate-unit">BPM</div>
+                        </div>
+                        <div class="oxygen-display">
+                            <div class="oxygen-icon">🫁</div>
+                            <div class="oxygen-value">98</div>
+                            <div class="oxygen-unit">%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Access your heart rate data seamlessly across desktop, tablet, and mobile devices with our responsive web interface.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Analytics</h3>
+                    <p>View comprehensive charts and analytics including weekly summaries and detailed daily views of your health metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Customizable Settings</h3>
+                    <p>Configure measurement intervals and time ranges to match your lifestyle and health monitoring needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Your health data is protected with industry-standard encryption and secure authentication protocols.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>IoT Integration</h3>
+                    <p>Connect multiple devices and receive real-time measurements with offline data storage capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Notifications</h3>
+                    <p>Get immediate alerts and LED indicators on your device when measurements are needed or completed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Connect Your Device</h3>
+                        <p>Register your Particle Photon device with MAX30102 sensor through our web application.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Configure Settings</h3>
+                        <p>Set your preferred measurement intervals and time ranges for personalized monitoring.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Monitor & Analyze</h3>
+                        <p>View real-time data, weekly summaries, and detailed analytics through our intuitive dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-content">
+                <p class="team-description">
+                    This project is developed as part of the ECE 413/513 course at the University of Arizona. 
+                    Our team is dedicated to creating innovative IoT solutions for healthcare monitoring.
+                </p>
+                <div class="course-info">
+                    <h3>Course Information</h3>
+                    <ul>
+                        <li><strong>Course:</strong> ECE 413/513</li>
+                        <li><strong>Project:</strong> Heart Rate Monitoring System</li>
+                        <li><strong>Due Date:</strong> December 15, 2025</li>
+                        <li><strong>Technology Stack:</strong> Node.js, Express, MongoDB, HTML5, CSS3, JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Heart Track</h3>
+                    <p>IoT-enabled heart rate monitoring system for ECE 413/513.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="reference.html">References</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs/setup.md">Setup Guide</a></li>
+                        <li><a href="docs/api.md">API Documentation</a></li>
+                        <li><a href="docs/hardware.md">Hardware Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ECE 413/513 Team. Educational project for University of Arizona.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
