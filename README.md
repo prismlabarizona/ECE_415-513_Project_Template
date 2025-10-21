@@ -197,16 +197,6 @@ npm run lint
 4. Update IoT device firmware with production server URL
 5. Test end-to-end functionality
 
-## Course Information
-
-- **Course**: ECE 413/513
-- **Project**: Heart Rate Monitoring System
-- **Due Date**: December 15, 2025 (11:59 PM)
-- **Late Submission**: December 17, 2025 (11:59 PM) with 10-point deduction
-- **Instructor**: [Your Name]
-- **TA**: [TA Name]
-- **Office Hours**: [Schedule]
-
 ## Third-Party Libraries and APIs
 
 See `public/reference.html` for a complete list of third-party libraries, APIs, and code used in this project.
